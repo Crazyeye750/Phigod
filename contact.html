@@ -34,12 +34,11 @@
         <p class="eyebrow">Contact</p>
         <h1>Say <em>hello</em></h1>
         <p class="lede">Interested in a piece from the gallery, a commission, or a seat in the next stone carving class? Jacqui would love to hear from you.</p>
+        <p>Email <a href="mailto:dbjcompany@mac.com">dbjcompany@mac.com</a> directly, or use the form below.</p>
 
-        <!-- TODO: point this form at a real endpoint.
-             1. Formspree — create a form at https://formspree.io, then set
-                action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
-             2. Netlify Forms — if hosting on Netlify, add `netlify` attribute
-             3. Or replace with a simple mailto: link. -->
+        <!-- The form opens the visitor's mail client addressed to the studio.
+             To send silently from the page instead, point it at a form endpoint
+             (e.g. Formspree: action="https://formspree.io/f/YOUR_FORM_ID" method="POST"). -->
         <form class="contact-form" action="#" method="POST" data-form-placeholder>
           <div>
             <label for="name">Name</label>

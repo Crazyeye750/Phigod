@@ -39,15 +39,12 @@ media, and years in `gallery.html`** — including the known works *Surrender* a
 *Brain Tumor*, which are likely among the untitled entries but couldn't be identified
 with confidence. Years shown were read from signatures and may be wrong.
 
-## ⚠️ Remaining placeholders / TODOs
+## Remaining TODOs
 
-1. **Contact form** — the form currently falls back to a `mailto:` link with a placeholder
-   address (`hello@jacquimelman.com`). Either update that address in `js/main.js`, or wire
-   the form to a real endpoint (see the TODO comment in `contact.html`; Formspree and
-   Netlify Forms are both free and take ~5 minutes).
-2. **Studio photos** — `images/art/studio.svg` (lessons page) is still a labeled SVG
-   placeholder. The artist portrait (about) and outdoor photo (contact) are real.
-3. **Quotes** — the two pull-quotes (about + lessons pages) are editorial placeholders;
+1. **Contact form** — submissions open the visitor's mail client addressed to
+   `dbjcompany@mac.com` (set in `js/main.js`). To send silently from the page instead,
+   wire the form to an endpoint like Formspree or Netlify Forms (comment in `contact.html`).
+2. **Quotes** — the two pull-quotes (about + lessons pages) are editorial placeholders;
    replace them with Jacqui's own words or remove them.
 
 ## Local preview

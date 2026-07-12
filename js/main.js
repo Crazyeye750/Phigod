@@ -121,9 +121,8 @@
       var message = form.querySelector("#message").value;
       var body =
         "Name: " + name + "\nEmail: " + email + "\nTopic: " + topicText + "\n\n" + message;
-      // TODO: replace with the studio's real email address.
       window.location.href =
-        "mailto:hello@jacquimelman.com" +
+        "mailto:dbjcompany@mac.com" +
         "?subject=" + encodeURIComponent("Website inquiry: " + topicText) +
         "&body=" + encodeURIComponent(body);
       if (note) {
