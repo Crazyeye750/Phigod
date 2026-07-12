@@ -20,25 +20,34 @@ maintain — it can be hosted anywhere (GitHub Pages, Netlify, Cloudflare Pages,
 
 Shared assets: `css/style.css`, `js/main.js`, `images/art/*.svg`.
 
-## ⚠️ Placeholders to replace before launch
+## Artwork
 
-The original site's images couldn't be exported automatically, so every artwork image is a
-clearly-labeled **SVG placeholder** in `images/art/`. To finish the site:
+The gallery now features twelve of Jacqui's real works (photos supplied by the owner,
+resized and optimized in `images/art/`). The red-stone crouching figure appears twice on
+the site from two angles (`sculpture-figure.jpg` on the home hero and gallery,
+`sculpture-figure-2.jpg` on the about page) — it is treated as one piece in the gallery.
+Titles that could be confirmed or confidently matched:
 
-1. **Artwork photos** — export the photos from the old Wix site (Wix dashboard → Media
-   Manager → download), then drop them into `images/art/` and update the `<img src>` paths
-   in `index.html`, `about.html`, `gallery.html`, and `contact.html`. Portrait-orientation
-   images (~4:5) will fit the existing layout best; the gallery crops to 4:5 automatically.
-   Known piece titles already wired into the gallery: **Surrender**, **Family**,
-   **Palomino**, and **Brain Tumor**. The "Stone Study" and "Assemblage" entries are
-   placeholder names — rename them to the real titles in `gallery.html`.
-2. **Contact form** — the form currently falls back to a `mailto:` link with a placeholder
+- **Instruments** (oil, 1996) — title taken from the original site's lightbox caption.
+- **Palomino** (pastel) — matched to the horse pastel; the title is referenced in press
+  about the original site.
+- **Family** (oil) — matched to the figures-under-a-swirling-sun oil, which fits the
+  published description ("post-impressionists with a nod to Van Gogh's Starry Night").
+
+Everything else is listed as **Untitled** with a medium line. **Please correct titles,
+media, and years in `gallery.html`** — including the known works *Surrender* and
+*Brain Tumor*, which are likely among the untitled entries but couldn't be identified
+with confidence. Years shown were read from signatures and may be wrong.
+
+## ⚠️ Remaining placeholders / TODOs
+
+1. **Contact form** — the form currently falls back to a `mailto:` link with a placeholder
    address (`hello@jacquimelman.com`). Either update that address in `js/main.js`, or wire
    the form to a real endpoint (see the TODO comment in `contact.html`; Formspree and
    Netlify Forms are both free and take ~5 minutes).
-3. **Artist portrait & studio photos** — replace `images/art/portrait.svg` and
-   `images/art/studio.svg`.
-4. **Quotes** — the two pull-quotes (about + lessons pages) are editorial placeholders;
+2. **Studio photos** — `images/art/studio.svg` (lessons page) is still a labeled SVG
+   placeholder. The artist portrait (about) and outdoor photo (contact) are real.
+3. **Quotes** — the two pull-quotes (about + lessons pages) are editorial placeholders;
    replace them with Jacqui's own words or remove them.
 
 ## Local preview
