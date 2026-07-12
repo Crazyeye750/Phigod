@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Placeholder for the painting Brain Tumor">
+  <rect width="800" height="1000" fill="#23211e"/>
+  <path d="M400 160 Q580 180 620 360 Q650 520 520 600 Q400 660 300 590 Q180 510 200 360 Q230 200 400 160 Z" fill="#b5502a"/>
+  <path d="M400 220 Q530 240 560 370 Q580 480 490 540 Q400 580 330 530 Q250 470 270 370 Q290 250 400 220 Z" fill="#d98e4f" opacity="0.85"/>
+  <g fill="none" stroke="#23211e" stroke-width="10" opacity="0.6">
+    <path d="M330 300 Q400 260 470 310"/>
+    <path d="M310 400 Q400 350 500 400"/>
+    <path d="M330 480 Q410 440 480 490"/>
+  </g>
+  <circle cx="520" cy="330" r="46" fill="#c99a3f"/>
+  <path d="M120 760 L680 760" stroke="#e8dcc8" stroke-width="6" opacity="0.4"/>
+  <path d="M170 830 L630 830" stroke="#e8dcc8" stroke-width="4" opacity="0.25"/>
+  <text x="400" y="950" font-family="Georgia, serif" font-size="26" fill="#a89f93" text-anchor="middle" opacity="0.8">Placeholder — replace with photo of “Brain Tumor”</text>
+</svg>
