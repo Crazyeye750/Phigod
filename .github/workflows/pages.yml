@@ -1,4 +1,8 @@
-name: Deploy to GitHub Pages
+name: Publish to GitHub Pages
+
+# Publishes the site by pushing the repo contents to the gh-pages branch,
+# which GitHub Pages serves. (API-based Pages enablement isn't available
+# to the workflow token, so the classic branch-based flow is used.)
 
 on:
   push:
@@ -8,34 +12,26 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Push site to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan gh-pages
+          rm -rf .github
+          touch .nojekyll
+          git add -A
+          git commit -m "Deploy site from ${GITHUB_SHA::7}"
+          git push -f origin gh-pages
