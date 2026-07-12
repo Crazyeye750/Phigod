@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Jacqui Melman</title>
+  <meta name="description" content="Gallery of oil paintings, pastels, and carved-stone sculpture by New Jersey artist Jacqui Melman.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Work+Sans:wght@300..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="index.html">Jacqui Melman<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation"><span></span></button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+      <li><a href="lessons.html">Lessons</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top: clamp(8rem, 16vw, 12rem);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">Gallery</span>
+        <h1>Selected <em>works</em></h1>
+        <p class="lede">Oil paintings, pastels, and carved stone. Click any piece to view it larger — for pricing and availability, <a href="contact.html">get in touch</a>.</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter gallery by medium">
+        <button class="filter-btn active" data-filter="all">All<sup>12</sup></button>
+        <button class="filter-btn" data-filter="painting">Paintings<sup>6</sup></button>
+        <button class="filter-btn" data-filter="pastel">Pastels<sup>4</sup></button>
+        <button class="filter-btn" data-filter="sculpture">Sculpture<sup>2</sup></button>
+      </div>
+
+      <div class="masonry">
+        <article class="work" data-category="painting" tabindex="0">
+          <figure>
+            <img src="images/art/instruments.jpg" alt="Instruments — a vibrant oil painting of intertwined guitars, drums, piano keys, and a cello in saturated color" loading="lazy" width="1062" height="1600">
+            <figcaption>
+              <p class="work-title">Instruments</p>
+              <p class="work-meta">Oil on Canvas · 1996</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="painting" tabindex="0">
+          <figure>
+            <img src="images/art/family.jpg" alt="Family — an oil painting of two pairs of figures in a swirling landscape beneath a radiant Van Gogh-like sun" loading="lazy" width="1600" height="1082">
+            <figcaption>
+              <p class="work-title">Family</p>
+              <p class="work-meta">Oil on Canvas</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="sculpture" tabindex="0">
+          <figure>
+            <img src="images/art/sculpture-figure.jpg" alt="A crouching figure carved in swirled red and amber stone, resting its head on folded arms" loading="lazy" width="1302" height="1600">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Sculpture · Carved Stone</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="pastel" tabindex="0">
+          <figure>
+            <img src="images/art/palomino.jpg" alt="Palomino — a dynamic pastel of a rearing horse before a fence, barn, and farm buildings" loading="lazy" width="1249" height="1600">
+            <figcaption>
+              <p class="work-title">Palomino</p>
+              <p class="work-meta">Pastel</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="painting" tabindex="0">
+          <figure>
+            <img src="images/art/abstract-figures.jpg" alt="A richly colored abstract oil painting of intertwined organic and figurative forms" loading="lazy" width="1591" height="1600">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Oil on Canvas · 1996</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="pastel" tabindex="0">
+          <figure>
+            <img src="images/art/blue-sleepers.jpg" alt="An expressionist pastel of figures in blue resting on a red and orange bed" loading="lazy" width="1097" height="1501">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Pastel · 1996</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="painting" tabindex="0">
+          <figure>
+            <img src="images/art/cubist-forms.jpg" alt="A large cubist abstract oil painting of interlocking curved and angular forms with figurative elements" loading="lazy" width="1191" height="1600">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Oil on Canvas</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="sculpture" tabindex="0">
+          <figure>
+            <img src="images/art/stone-nude.jpg" alt="A female figure carved in gray-green stone with raw-carved hair, one arm raised, on a stone base" loading="lazy" width="1058" height="1600">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Sculpture · Carved Stone</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="painting" tabindex="0">
+          <figure>
+            <img src="images/art/earth-ribbons.jpg" alt="An abstract oil painting of serpentine ribbon forms in muted earth tones surrounding a pale sphere" loading="lazy" width="1600" height="1272">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Oil on Canvas · 1990</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="pastel" tabindex="0">
+          <figure>
+            <img src="images/art/crouched-figure.jpg" alt="An expressive charcoal and pastel drawing of a crouched figure with head bowed over folded arms" loading="lazy" width="1209" height="1600">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Charcoal &amp; Pastel on Paper</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="painting" tabindex="0">
+          <figure>
+            <img src="images/art/red-abstract.jpg" alt="A bold abstract oil painting of curving organic shapes in red, orange, and violet" loading="lazy" width="1600" height="1342">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Oil on Canvas</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="work" data-category="pastel" tabindex="0">
+          <figure>
+            <img src="images/art/crimson-couch.jpg" alt="A pastel of two figures embracing on a crimson couch beside candlelight" loading="lazy" width="1600" height="1195">
+            <figcaption>
+              <p class="work-title">Untitled</p>
+              <p class="work-meta">Pastel</p>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band on-dark">
+    <div class="wrap reveal">
+      <h2>Interested in <em>a piece</em>?</h2>
+      <p>Many works are available for purchase, and commissions are welcome.</p>
+      <a class="btn btn-clay" href="contact.html">Inquire About a Work</a>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged artwork view">
+  <button class="lightbox-close" aria-label="Close">✕</button>
+  <button class="lightbox-prev" aria-label="Previous work">←</button>
+  <button class="lightbox-next" aria-label="Next work">→</button>
+  <img src="" alt="">
+  <div class="lightbox-caption"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-name" aria-hidden="true">Jacqui Melman</p>
+    <div class="footer-inner">
+      <p style="margin: 0;">© <span id="year"></span> Jacqui Melman. All artwork remains the property of the artist.</p>
+      <ul class="footer-nav">
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

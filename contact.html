@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Jacqui Melman</title>
+  <meta name="description" content="Contact New Jersey artist Jacqui Melman about artwork, commissions, or stone carving lessons in Manalapan, NJ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Work+Sans:wght@300..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="index.html">Jacqui Melman<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation"><span></span></button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="lessons.html">Lessons</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top: clamp(8rem, 16vw, 12rem);">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Say <em>hello</em></h1>
+        <p class="lede">Interested in a piece from the gallery, a commission, or a seat in the next stone carving class? Jacqui would love to hear from you.</p>
+        <p>Email <a href="mailto:dbjcompany@mac.com">dbjcompany@mac.com</a> directly, or use the form below.</p>
+
+        <!-- The form opens the visitor's mail client addressed to the studio.
+             To send silently from the page instead, point it at a form endpoint
+             (e.g. Formspree: action="https://formspree.io/f/YOUR_FORM_ID" method="POST"). -->
+        <form class="contact-form" action="#" method="POST" data-form-placeholder>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="topic">I'm interested in…</label>
+            <select id="topic" name="topic">
+              <option value="lessons">Stone carving lessons</option>
+              <option value="artwork">Purchasing artwork</option>
+              <option value="commission">A commission</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div>
+            <button class="btn btn-clay" type="submit">Send Message</button>
+          </div>
+          <p class="form-note" data-form-note hidden></p>
+        </form>
+      </div>
+      <div class="split-media reveal">
+        <img src="images/art/jacqui-outdoors.jpg" alt="Jacqui Melman smiling outdoors in the sunshine" width="986" height="1264">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark on-dark">
+    <div class="wrap">
+      <div class="card-grid reveal" style="background: rgba(236,228,212,0.15); border-color: rgba(236,228,212,0.15);">
+        <div class="card" style="background: var(--dark-2);">
+          <span class="num">01</span>
+          <h3 style="color: var(--on-dark);">Studio</h3>
+          <p style="color: var(--on-dark-dim);">Manalapan, New Jersey. Directions provided upon enrollment or appointment.</p>
+        </div>
+        <div class="card" style="background: var(--dark-2);">
+          <span class="num">02</span>
+          <h3 style="color: var(--on-dark);">Artwork Inquiries</h3>
+          <p style="color: var(--on-dark-dim);">Please mention the piece you're interested in — see the <a href="gallery.html" style="color: var(--gold);">gallery</a>.</p>
+        </div>
+        <div class="card" style="background: var(--dark-2);">
+          <span class="num">03</span>
+          <h3 style="color: var(--on-dark);">Lessons</h3>
+          <p style="color: var(--on-dark-dim);">Ask about upcoming class schedules and beginner availability — details on the <a href="lessons.html" style="color: var(--gold);">lessons page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-name" aria-hidden="true">Jacqui Melman</p>
+    <div class="footer-inner">
+      <p style="margin: 0;">© <span id="year"></span> Jacqui Melman. All artwork remains the property of the artist.</p>
+      <ul class="footer-nav">
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
