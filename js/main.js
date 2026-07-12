@@ -1,25 +1,47 @@
-/* jacquimelman.com — shared behavior: nav toggle, gallery filter, lightbox */
+/* jacquimelman.com — nav, scroll effects, gallery filter, lightbox */
 
 (function () {
   "use strict";
 
-  // Footer year
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  // Mobile navigation toggle
+  // Header shadow on scroll
+  var header = document.querySelector(".site-header");
+  var onScroll = function () {
+    header.classList.toggle("scrolled", window.scrollY > 20);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Full-screen mobile navigation
   var toggle = document.querySelector(".nav-toggle");
-  var menu = document.getElementById("nav-menu");
-  if (toggle && menu) {
+  if (toggle) {
     toggle.addEventListener("click", function () {
-      var open = menu.classList.toggle("open");
+      var open = document.body.classList.toggle("nav-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
   }
 
+  // Scroll-reveal animations
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  }
+
   // Gallery filtering
   var filterButtons = document.querySelectorAll(".filter-btn");
-  var works = document.querySelectorAll(".work");
+  var works = Array.prototype.slice.call(document.querySelectorAll(".work"));
   filterButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
       filterButtons.forEach(function (b) { b.classList.remove("active"); });
@@ -32,52 +54,61 @@
     });
   });
 
-  // Lightbox
+  // Lightbox with prev/next
   var lightbox = document.getElementById("lightbox");
-  if (lightbox) {
+  if (lightbox && works.length) {
     var lbImg = lightbox.querySelector("img");
     var lbCaption = lightbox.querySelector(".lightbox-caption");
-    var lbClose = lightbox.querySelector(".lightbox-close");
+    var current = 0;
 
-    var openLightbox = function (work) {
-      var img = work.querySelector("img");
-      var title = work.querySelector(".work-title");
-      var meta = work.querySelector(".work-meta");
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
-      lbCaption.innerHTML =
-        "<strong>" + (title ? title.textContent : "") + "</strong><br>" +
-        (meta ? meta.textContent : "");
-      lightbox.classList.add("open");
-      lbClose.focus();
+    var visibleWorks = function () {
+      return works.filter(function (w) { return !w.classList.contains("hidden"); });
     };
 
-    var closeLightbox = function () {
+    var show = function (index) {
+      var list = visibleWorks();
+      if (!list.length) return;
+      current = (index + list.length) % list.length;
+      var work = list[current];
+      var img = work.querySelector("img");
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      var title = work.querySelector(".work-title");
+      var meta = work.querySelector(".work-meta");
+      lbCaption.innerHTML =
+        "<strong>" + (title ? title.textContent : "") + "</strong>" +
+        (meta ? meta.textContent : "") +
+        " &nbsp;·&nbsp; " + (current + 1) + " / " + list.length;
+      lightbox.classList.add("open");
+    };
+
+    var close = function () {
       lightbox.classList.remove("open");
       lbImg.src = "";
     };
 
     works.forEach(function (work) {
-      work.addEventListener("click", function () { openLightbox(work); });
+      var open = function () { show(visibleWorks().indexOf(work)); };
+      work.addEventListener("click", open);
       work.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          openLightbox(work);
-        }
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
       });
     });
 
-    lbClose.addEventListener("click", closeLightbox);
-    lightbox.addEventListener("click", function (e) {
-      if (e.target === lightbox) closeLightbox();
-    });
+    lightbox.querySelector(".lightbox-close").addEventListener("click", close);
+    lightbox.querySelector(".lightbox-prev").addEventListener("click", function (e) { e.stopPropagation(); show(current - 1); });
+    lightbox.querySelector(".lightbox-next").addEventListener("click", function (e) { e.stopPropagation(); show(current + 1); });
+    lightbox.addEventListener("click", function (e) { if (e.target === lightbox) close(); });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && lightbox.classList.contains("open")) closeLightbox();
+      if (!lightbox.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
     });
   }
 
-  // Contact form placeholder handler: until a real endpoint is wired up,
-  // fall back to opening the visitor's mail client with the message prefilled.
+  // Contact form: until a real endpoint is wired up, open the visitor's
+  // mail client with the message prefilled.
   var form = document.querySelector("form[data-form-placeholder]");
   if (form) {
     form.addEventListener("submit", function (e) {

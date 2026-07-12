@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Jacqui Melman</title>
-  <meta name="description" content="About New Jersey artist Jacqui Melman: her training in color theory at the School of Visual Arts, her BFA from SUNY Albany, and a decade of stone carving under Elaine Warshaw.">
+  <meta name="description" content="About New Jersey artist Jacqui Melman: color theory at the School of Visual Arts, a BFA from SUNY Albany, and a decade of stone carving under Elaine Warshaw.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Work+Sans:wght@300..600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎨</text></svg>">
 </head>
@@ -15,8 +15,8 @@
 
 <header class="site-header">
   <div class="wrap nav-bar">
-    <a class="brand" href="index.html">Jacqui<span>&nbsp;Melman</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
+    <a class="brand" href="index.html">Jacqui Melman<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation"><span></span></button>
     <ul class="nav-links" id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" aria-current="page">About</a></li>
@@ -28,71 +28,73 @@
 </header>
 
 <main>
-  <section class="section">
-    <div class="wrap two-col">
+  <section class="section" style="padding-top: clamp(8rem, 16vw, 12rem);">
+    <div class="wrap split">
       <div>
-        <span class="eyebrow">About the Artist</span>
-        <h1>Jacqui Melman</h1>
-        <p>Jacqui Melman is a New Jersey–based artist whose work is informed by her early study of color theory at The School of Visual Arts in New York City. She went on to receive a Bachelor of Fine Arts degree from the State University of New York at Albany, where she honed her singular sense of color and abstraction.</p>
-        <p>Her modernistic style carefully blends intensity, an inherent sexuality, and a divine sense of whimsy and humor. Much of her painted work is influenced by cubists like Max Weber and Georges Braque, with nods to the post-impressionists — and to Marc Chagall — surfacing throughout.</p>
-        <p>Her work has been shown in numerous juried exhibitions throughout the Hudson Valley of New York.</p>
+        <p class="eyebrow">About the Artist</p>
+        <h1>Jacqui <em>Melman</em></h1>
+        <p class="lede">A New Jersey artist whose work blends intensity, an inherent sensuality, and a divine sense of whimsy and humor.</p>
+        <p>Jacqui's work is informed by her early study of color theory at The School of Visual Arts in New York City. She went on to receive a Bachelor of Fine Arts from the State University of New York at Albany, where she honed her singular sense of color and abstraction.</p>
+        <p>Much of her painted work is influenced by cubists like Max Weber and Georges Braque, with nods to the post-impressionists — and to Marc Chagall — surfacing throughout. Her work has been shown in numerous juried exhibitions throughout the Hudson Valley of New York.</p>
       </div>
-      <div class="framed">
+      <div class="split-media reveal">
         <img src="images/art/portrait.jpg" alt="Portrait of artist Jacqui Melman" width="1122" height="1402">
       </div>
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="wrap two-col">
-      <div class="framed">
-        <img src="images/art/sculpture-figure-2.jpg" alt="A kneeling figure carved by Jacqui Melman in swirled red and amber stone, hair cascading over crossed arms" width="1183" height="1600" loading="lazy">
-      </div>
+  <section class="section section-dark on-dark">
+    <div class="wrap split rev">
       <div>
-        <span class="eyebrow">The Stone</span>
-        <h2>A decade with the chisel</h2>
-        <p>After studying stone carving for the better part of a decade under the tutelage of renowned artist Elaine Warshaw, Jacqui launched her own school for aspiring sculptors in Manalapan, NJ.</p>
-        <p>Inspired by modernism and the stonework of José de Creeft, her carving is more classical in its elements than her work in other media — a counterweight of patience and permanence to the exuberance of her canvases.</p>
-        <blockquote class="pull">"The form is already in the stone. My job — and my students' job — is to listen for it."</blockquote>
-        <a class="btn btn-primary" href="lessons.html">Study with Jacqui</a>
+        <p class="eyebrow">The Stone</p>
+        <h2>A decade with <em>the chisel</em></h2>
+        <p style="color: var(--on-dark-dim);">After studying stone carving for the better part of a decade under the tutelage of renowned artist Elaine Warshaw, Jacqui launched her own school for aspiring sculptors in Manalapan, NJ.</p>
+        <p style="color: var(--on-dark-dim);">Inspired by modernism and the stonework of José de Creeft, her carving is more classical in its elements than her work in other media — a counterweight of patience and permanence to the exuberance of her canvases.</p>
+        <p style="margin-top: 2rem;"><a class="btn btn-clay" href="lessons.html">Study with Jacqui</a></p>
+      </div>
+      <div class="split-media reveal">
+        <img src="images/art/sculpture-figure-2.jpg" alt="A kneeling figure carved by Jacqui Melman in swirled red and amber stone, hair cascading over crossed arms" width="1183" height="1600" loading="lazy">
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Milestones</span>
-        <h2>Training &amp; influences</h2>
+      <div class="section-head reveal">
+        <span class="num">Milestones</span>
+        <h2>Training &amp; <em>influences</em></h2>
       </div>
-      <ul class="lesson-list">
-        <li><strong>The School of Visual Arts, NYC</strong> — early study of color theory that still anchors every canvas.</li>
-        <li><strong>BFA, State University of New York at Albany</strong> — where her sense of color and abstraction took shape.</li>
-        <li><strong>A decade under Elaine Warshaw</strong> — rigorous training in the craft of stone carving.</li>
-        <li><strong>Juried exhibitions across the Hudson Valley</strong> — paintings, sculpture, and mixed media.</li>
-        <li><strong>Founder, stone carving school in Manalapan, NJ</strong> — passing the craft to the next generation of sculptors.</li>
-      </ul>
+      <ol class="milestones reveal">
+        <li><div><strong>The School of Visual Arts, NYC</strong><p>Early study of color theory that still anchors every canvas.</p></div></li>
+        <li><div><strong>BFA, State University of New York at Albany</strong><p>Where her sense of color and abstraction took shape.</p></div></li>
+        <li><div><strong>A decade under Elaine Warshaw</strong><p>Rigorous training in the craft of stone carving.</p></div></li>
+        <li><div><strong>Juried exhibitions across the Hudson Valley</strong><p>Paintings, sculpture, and works on paper.</p></div></li>
+        <li><div><strong>Founder — stone carving school, Manalapan, NJ</strong><p>Passing the craft to the next generation of sculptors.</p></div></li>
+      </ol>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>See the work for yourself.</h2>
-      <p>Paintings, sculpture, and mixed media — collected in one gallery.</p>
-      <p><a class="btn btn-primary" href="gallery.html">Visit the Gallery</a></p>
+  <section class="cta-band on-dark">
+    <div class="wrap reveal">
+      <h2>See the work <em>for yourself</em>.</h2>
+      <p>Paintings, sculpture, and works on paper — collected in one gallery.</p>
+      <a class="btn btn-clay" href="gallery.html">Visit the Gallery</a>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <p>© <span id="year"></span> Jacqui Melman. All artwork remains the property of the artist.</p>
-    <ul class="footer-nav">
-      <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="lessons.html">Lessons</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <div class="wrap">
+    <p class="footer-name" aria-hidden="true">Jacqui Melman</p>
+    <div class="footer-inner">
+      <p style="margin: 0;">© <span id="year"></span> Jacqui Melman. All artwork remains the property of the artist.</p>
+      <ul class="footer-nav">
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </footer>
 

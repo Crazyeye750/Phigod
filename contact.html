@@ -7,7 +7,7 @@
   <meta name="description" content="Contact New Jersey artist Jacqui Melman about artwork, commissions, or stone carving lessons in Manalapan, NJ.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Work+Sans:wght@300..600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎨</text></svg>">
 </head>
@@ -15,8 +15,8 @@
 
 <header class="site-header">
   <div class="wrap nav-bar">
-    <a class="brand" href="index.html">Jacqui<span>&nbsp;Melman</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
+    <a class="brand" href="index.html">Jacqui Melman<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation"><span></span></button>
     <ul class="nav-links" id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -28,19 +28,18 @@
 </header>
 
 <main>
-  <section class="section">
-    <div class="wrap two-col">
+  <section class="section" style="padding-top: clamp(8rem, 16vw, 12rem);">
+    <div class="wrap split">
       <div>
-        <span class="eyebrow">Contact</span>
-        <h1>Say hello</h1>
-        <p>Whether you're interested in a piece from the gallery, a commission, or a seat in the next stone carving class in Manalapan, NJ — Jacqui would love to hear from you.</p>
+        <p class="eyebrow">Contact</p>
+        <h1>Say <em>hello</em></h1>
+        <p class="lede">Interested in a piece from the gallery, a commission, or a seat in the next stone carving class? Jacqui would love to hear from you.</p>
 
         <!-- TODO: point this form at a real endpoint.
-             Easiest options:
              1. Formspree — create a form at https://formspree.io, then set
                 action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
-             2. Netlify Forms — if hosting on Netlify, add `netlify` attribute to the form
-             3. Or replace the form with a simple mailto: link. -->
+             2. Netlify Forms — if hosting on Netlify, add `netlify` attribute
+             3. Or replace with a simple mailto: link. -->
         <form class="contact-form" action="#" method="POST" data-form-placeholder>
           <div>
             <label for="name">Name</label>
@@ -61,37 +60,37 @@
           </div>
           <div>
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea>
           </div>
           <div>
-            <button class="btn btn-primary" type="submit">Send Message</button>
+            <button class="btn btn-clay" type="submit">Send Message</button>
           </div>
           <p class="form-note" data-form-note hidden></p>
         </form>
       </div>
-      <div class="framed">
-        <img src="images/art/jacqui-outdoors.jpg" alt="Jacqui Melman smiling outdoors in the sunshine" width="986" height="1264" loading="lazy">
+      <div class="split-media reveal">
+        <img src="images/art/jacqui-outdoors.jpg" alt="Jacqui Melman smiling outdoors in the sunshine" width="986" height="1264">
       </div>
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section section-dark on-dark">
     <div class="wrap">
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">📍</div>
-          <h3>Studio</h3>
-          <p>Manalapan, New Jersey<br>Directions provided upon enrollment or appointment.</p>
+      <div class="card-grid reveal" style="background: rgba(236,228,212,0.15); border-color: rgba(236,228,212,0.15);">
+        <div class="card" style="background: var(--dark-2);">
+          <span class="num">01</span>
+          <h3 style="color: var(--on-dark);">Studio</h3>
+          <p style="color: var(--on-dark-dim);">Manalapan, New Jersey. Directions provided upon enrollment or appointment.</p>
         </div>
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">🖼️</div>
-          <h3>Artwork Inquiries</h3>
-          <p>Please mention the title of the piece you're interested in — see the <a href="gallery.html">gallery</a>.</p>
+        <div class="card" style="background: var(--dark-2);">
+          <span class="num">02</span>
+          <h3 style="color: var(--on-dark);">Artwork Inquiries</h3>
+          <p style="color: var(--on-dark-dim);">Please mention the piece you're interested in — see the <a href="gallery.html" style="color: var(--gold);">gallery</a>.</p>
         </div>
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">🪨</div>
-          <h3>Lessons</h3>
-          <p>Ask about upcoming class schedules and beginner availability. Details on the <a href="lessons.html">lessons page</a>.</p>
+        <div class="card" style="background: var(--dark-2);">
+          <span class="num">03</span>
+          <h3 style="color: var(--on-dark);">Lessons</h3>
+          <p style="color: var(--on-dark-dim);">Ask about upcoming class schedules and beginner availability — details on the <a href="lessons.html" style="color: var(--gold);">lessons page</a>.</p>
         </div>
       </div>
     </div>
@@ -99,14 +98,17 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <p>© <span id="year"></span> Jacqui Melman. All artwork remains the property of the artist.</p>
-    <ul class="footer-nav">
-      <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="lessons.html">Lessons</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <div class="wrap">
+    <p class="footer-name" aria-hidden="true">Jacqui Melman</p>
+    <div class="footer-inner">
+      <p style="margin: 0;">© <span id="year"></span> Jacqui Melman. All artwork remains the property of the artist.</p>
+      <ul class="footer-nav">
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </footer>
 
